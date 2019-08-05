@@ -1,0 +1,476 @@
+/**
+ * Scalable and Modular Architecture for CSS
+ */
+
+/**
+ * Base
+ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Times, serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+pre {
+    margin: 0; /* overrides browser default of 1em 0 */
+}
+
+pre code {
+    display: block;
+    padding: 10px; 
+    overflow: auto;   
+}
+
+code {
+     background-color: rgba(51, 153, 204, 0.1);
+}
+a {
+	color: #fff;
+}
+a:link {
+    color: hsla(200, 60%, 30%, 1)
+}
+
+a:visited {
+    color: hsla(200, 30%, 30%, 1)
+}
+a:hover {
+    color: hsla(200, 60%, 40%, 1)
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+h1 {
+    margin: 0 0 .5em;
+    font-size: 200%;
+    line-height: 1.1;
+}
+
+h2, h3 {
+    margin: 0;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0 0 1em;
+
+    /* HYPHENATE ALL THE THINGS! */
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -o-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+ol {
+    margin-top: 0;
+}
+/** Colors */
+.orange {
+	color: #f76b4a;
+}
+.bg_orange {
+	background-color: #f76b4a;
+}
+.blueviolet {
+	color: #663399;
+}
+.bg_blueviolet {
+	background-color: #663399;
+}
+.yellow {
+	color: #ffcc00;
+}
+.bg_yellow {
+	background-color: #ffcc00;
+}
+.green {
+	color: #00cc99;
+}
+.bg_green {
+	background-color: #00cc99;
+}
+
+/**
+ * Layout
+ */
+
+/**  User navbar
+ */
+
+.l-user {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0 0 0 auto;
+    padding: 0;
+    max-width: 300px;
+}
+.l-user li {
+	display: flex;
+}
+
+
+.l-user a {
+    background-color: #ffcc00;
+    color: #333333;
+    padding: 4px 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+.l-user .language_swicher a {
+    background: #00cc99;
+}
+
+.l-header {
+    background-color: #fff; 
+}
+
+.l-search-bar {
+    background-color: #eaeaea; 
+}
+
+.l-footer {
+}
+
+.l-footer h3 {
+    font-size: 100%;
+    margin: 0;
+	color: #fff;
+}
+
+.l-footer p {
+    margin: 0 0 1em;
+}
+
+.l-lowlight {
+    background-color: #000;
+}
+
+/**
+ * Constrained layout
+ */
+
+.l-constrained {
+    max-width: 600px;
+    margin: 0 0 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.l-constrained-tighter {
+    padding: 10px 0;
+}
+
+/* 2 col layout */
+.l-col-1-2 {
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+	overflow: hidden;
+}
+
+
+
+/**
+ *  Third Party
+ */
+#disqus_thread {
+    max-width: 500px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 1px solid #CCC;
+    background-color: rgba(0,0,0,.1);
+    clear: both;
+}
+
+
+/**
+ * CakePHP Form Controls
+ */
+.input {
+	padding: 6px 16px;
+}
+
+.input.password label, 
+.input.text label {
+    display: inline-block;
+    width: 20%;
+
+    /* IE7 inline-block hack */
+    *zoom: 1;
+    *display: inline;
+
+}
+
+.input.text input {
+    width: 75%;
+}
+.input-field {
+	display: flex;
+}
+/* used for auth messaging */
+.message {
+    padding: 3px 10px;
+    border-radius: 5px; 
+    background-color: #DDD;
+    color: #C00;
+
+}
+
+.error-message {
+    margin-left: 20%;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: #FCC;
+    font-size: 90%;
+}
+
+.input.checkbox {
+    margin-left: 20%;
+}
+
+.input.checkbox label {
+    padding-left: 8px;
+}
+
+.intro img {
+    float: left; 
+    margin-right:20px; 
+}
+
+/**
+ * Button
+ */
+
+.btn {
+    height: 40px;
+    background: #00cc99;
+    color: #fff;
+    transition: all .2s ease-out, color .2s ease-out;
+    border: 0;
+    border-radius: 0;
+}
+
+.btn-small {
+    font-weight: normal;
+    font-size: 100%;
+    padding: 2px 20px;
+}
+
+.btn-soldout {
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+a.btn:link { color: #FFF; }
+a.btn:visited { color: #FFF; }
+a.btn:hover { 
+    background: -webkit-linear-gradient(#4AB0E3, #4A6F81), #4A6F81;
+    background: -moz-linear-gradient(#4AB0E3, #4A6F81), #4A6F81;
+}
+
+/**
+ * Header module
+ * unique header treatment
+ */
+
+.logo {
+}
+
+/**
+ * Main Menu
+ */
+
+.l-main-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.l-main-menu li {
+	display: flex;
+}
+.l-main-menu li a {
+    font-family: Roboto;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.l-main-menu a.active {
+	color: #ff6666;
+}
+
+/**
+ * Banner
+ */
+.l-banner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 166px);
+	background: url(../img/banner.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.l-banner h1 {
+    color: #fff;
+	text-transform: uppercase;
+}
+.l-banner .btn {
+    background: #0c9;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 6px 20px;
+}
+.l-banner .btn:hover {
+    background: #00946f;
+}
+
+
+/**
+ * Articles
+ */
+.l-articles article {
+	display: flex;
+	align-items: center;
+	background: #f7f7f7;
+}
+.l-articles article:nth-child(2n) {
+    flex-direction: row-reverse;
+    background: #fff;
+}
+.l-articles article h3 {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.l-articles article img {
+    width: 130%;
+}
+.l-articles article .card-body {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.l-articles article .card-body .title {
+	display: flex
+}
+.l-articles article .card-text {
+    color: #393939;
+    font-size: 15px;
+}
+
+
+
+/**
+ * Module Newsletter
+ */
+
+.l-newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.l-newsletter .accroche {
+    font-size: 28px;
+    font-weight: 100;
+}
+/**
+ * Module Share footer
+ */
+
+.share {
+    display: flex;
+	padding: 0;
+}
+.share li {
+    list-style: none;
+    margin: 0 20px 0 0;
+}
+.share i {
+    color: #00cc99;
+    border: 2px solid #00cc99;
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/**
+ * Module footer Menu
+ */
+.footer-menu {
+	padding: 0;
+}
+.footer-menu li {
+	list-style: none;
+}
+.footer-menu li a {
+	color: #fff;
+}
+/**
+ * Module footer Contact
+ */
+.footer-contact {
+	padding: 0;
+}
+.footer-contact li {
+    list-style: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+hanging-punctuation: }
+.footer-contact li h4 {
+    font-size: 14px;
+}
+.footer-contact li i {
+    color: #00cc99;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0 10px 0 0;
+}
+.footer-contact li a {
+	color: #00cc99;
+}
+/**
+ * Icons
+ */
+.ico {
+    display: inline-block;
+    background-image: url(../img/sprite.png);
+    line-height: 0;
+    vertical-align: bottom;
+	margin-right: 20px;
+}
+.ico-62 {
+    height: 62px;
+    width: 62px;
+    border-radius: 50%;
+}
+
+.ico-dollar {
+    background-position: 0 0;
+}
+
+.ico-building {
+    background-position: 0 -66px;
+}
+.ico-house-heart {
+    background-position: -64px -64px;
+}
